@@ -5,10 +5,14 @@ public class Data {
     public static final String Password = "1234567890";
     public static final String Nickname = "Atata";
     public static final String Phone = "8885554433";
+    public static final String Location = "Tampa";
 
     // Search data
     public static final String expectedUrlSearch = "https://romanceabroad.com/users/search";
 
     // Media data
     public static final String expectedUrlMedia = "https://romanceabroad.com/media/index";
+
+    // Store data
+    public static final String expectedUrlStore = "https://romanceabroad.com/store/category-sweets";
 }
