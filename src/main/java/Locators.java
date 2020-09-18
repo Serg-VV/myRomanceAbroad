@@ -25,6 +25,7 @@ public class Locators {
 
     //Search Page
     public static final By LINK_SEARCH = By.xpath("//*[@href='https://romanceabroad.com/users/search']");
+    public static final By DDL_SORT_BY = By.xpath("//div[@class='form-inline']//select");
 
     //Store Page
     public static final By LINK_STORE = By.cssSelector("a[href='https://romanceabroad.com/store/category-sweets']");
