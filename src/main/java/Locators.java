@@ -4,6 +4,7 @@ public class Locators {
 
     // MediaPage
     public static final By LINK_MEDIA = By.cssSelector("a[href='https://romanceabroad.com/media/index']");
+    public static final By MEDIA_DDL_SORT_BY = By.xpath("//span[@id='gallery_media_sorter']//select");
     public static final By PHOTOS_SVETLANKA_44 = By.cssSelector("a[title='svetlanka, 44']");
 
     // Registration
@@ -25,8 +26,17 @@ public class Locators {
 
     //Search Page
     public static final By LINK_SEARCH = By.xpath("//*[@href='https://romanceabroad.com/users/search']");
-    public static final By DDL_SORT_BY = By.xpath("//div[@class='form-inline']//select");
+    public static final By SEARCH_DDL_SORT_BY = By.xpath("//div[@class='form-inline']//select");
+    public static final By DDL_AGE_MIN = By.cssSelector("select#age_min");
+    public static final By DDL_AGE_MAX = By.xpath("//div[@class='col-xs-5 no-padding-right']//select");
+    public static final By SEARCH_BUTTON_SEARCH = By.cssSelector("#main_search_button_user_advanced");
 
     //Store Page
     public static final By LINK_STORE = By.cssSelector("a[href='https://romanceabroad.com/store/category-sweets']");
+
+    //Main Page
+    public static final By YOUTUBE_LINK = By.xpath("//iFrame[@src='https://www.youtube.com/embed/RRECuJzm3IY?start=85']");
+    public static final By YOUTUBE_PLAY = By.cssSelector("button[aria-label='Play']");
+    public static final By YOUTUBE_FULLSCREEN = By.cssSelector("button[title='Full screen (f)']");
+
 }
