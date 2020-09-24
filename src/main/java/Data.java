@@ -6,6 +6,7 @@ public class Data {
     public static final String Nickname = "Atata";
     public static final String Phone = "8885554433";
     public static final String Location = "Tampa";
+    public static final String CheckBoxConfirmation = "_CheckBox";
 
     // Search data
     public static final String expectedUrlSearch = "https://romanceabroad.com/users/search";

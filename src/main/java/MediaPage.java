@@ -1,40 +1,31 @@
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.Test;
+
 import java.util.concurrent.TimeUnit;
 
-public class MediaTests extends BaseUI{
+public class MediaPage extends BaseActions {
 
-    String currentUrl;
+    public MediaPage(WebDriver driver, WebDriverWait wait){
 
-    @Test
-    public void testPhotosPage(){
-
-        driver.findElement(Locators.LINK_MEDIA).click();
-        currentUrl = driver.getCurrentUrl();
-        System.out.println(currentUrl);
-        Assert.assertEquals(currentUrl, Data.expectedUrlMedia);
+        super(driver, wait);
     }
 
-    String currentUrlMedia;
-
-    @Test
-    public void testPhotosDropDownList(){
+    public void testDropDownListSortBy(){
 
         driver.findElement(Locators.LINK_MEDIA).click();
         currentUrlMedia = driver.getCurrentUrl();
         System.out.println(currentUrlMedia);
         Assert.assertEquals(currentUrlMedia, Data.expectedUrlMedia);
+
         wait.until(ExpectedConditions.elementToBeClickable(Locators.MEDIA_DDL_SORT_BY));
         WebElement dropDownListSortBy = driver.findElement(Locators.MEDIA_DDL_SORT_BY);
         getDropDownListByValue(dropDownListSortBy,Data.mediaSortBy);
-
-
     }
 
-    @Test
-    public void testPhotosSvetlanka44Implicit(){
+    public void testPageSvetlanka44Implicit(){
 
         driver.findElement(Locators.LINK_MEDIA).click();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
@@ -42,11 +33,9 @@ public class MediaTests extends BaseUI{
         currentUrl = driver.getCurrentUrl();
         System.out.println(currentUrl);
         Assert.assertEquals(currentUrl, Data.expectedUrlMedia);
-
     }
 
-    @Test
-    public void testPhotosSvetlanka44Explicid(){
+    public void testPageSvetlanka44Explicid(){
 
         driver.findElement(Locators.LINK_MEDIA).click();
         wait.until(ExpectedConditions.elementToBeClickable(Locators.PHOTOS_SVETLANKA_44));
@@ -54,6 +43,5 @@ public class MediaTests extends BaseUI{
         currentUrl = driver.getCurrentUrl();
         System.out.println(currentUrl);
         Assert.assertEquals(currentUrl, Data.expectedUrlMedia);
-
     }
 }
