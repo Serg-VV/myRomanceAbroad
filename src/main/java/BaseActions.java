@@ -13,6 +13,7 @@ public class BaseActions {
     String currentUrl;
     String currentUrlMedia;
 
+
     public BaseActions(WebDriver driver, WebDriverWait wait){
         this.driver = driver;
         this.wait = wait;

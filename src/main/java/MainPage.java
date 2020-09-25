@@ -50,11 +50,18 @@ public class MainPage extends BaseActions {
         System.out.println(selectedCheckBox + Data.CheckBoxConfirmation);
         checkBoxConfirmation.click();
     }
+
     public void openStorePage(){
         driver.findElement(Locators.LINK_STORE).click();
         currentUrlStore = driver.getCurrentUrl();
         System.out.println(currentUrlStore);
         Assert.assertEquals(currentUrlStore, Data.expectedUrlStore);
+        if(currentUrlStore.equals(Data.expectedUrlStore)){
+            System.out.println(Data.successVerificationNotice);
+        }
+        else {
+            Assert.fail(Data.storePageFailNotice);
+        }
     }
 
     public void openMediaPage(){

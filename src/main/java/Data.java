@@ -1,5 +1,7 @@
 public class Data {
 
+    public static final String mainUrl = "https://romanceabroad.com/";
+
     // Registration data
     public static final String Email = "atata@gmail.com";
     public static final String Password = "1234567890";
@@ -21,4 +23,6 @@ public class Data {
 
     // Store data
     public static final String expectedUrlStore = "https://romanceabroad.com/store/category-sweets";
+    public static final String successVerificationNotice = "Store page has been open successfully";
+    public static final String storePageFailNotice = "Store page has not been open";
 }

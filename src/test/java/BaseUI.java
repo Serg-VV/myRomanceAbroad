@@ -32,7 +32,7 @@ public class BaseUI {
 
     @AfterMethod
     public void closeAction(){
-        // driver.quit();
+        driver.quit();
     }
 
 }
